@@ -1,7 +1,7 @@
 services:
   mongodb:
     build:
-      dockerfile: mongodb.Dockerfile # it moves to mongodb directory
+      dockerfile: ./mongodb # it moves to mongodb directory
     image: perampriya/mongodb:1.0.0 # docker build -t perampriya/mongodb:1.0.0 
     container_name: mongodb
 
