@@ -1,4 +1,10 @@
 services:
+  catalogue:
+    build:
+      dockerfile: ./catalogue # it moves to catalogue directory
+    image: perampriya/catalogue:1.0.0 # docker build -t perampriya/catalogue:1.0.0 
+    container_name: catalogue
+
   mongodb:
     build:
       dockerfile: ./mongodb # it moves to mongodb directory
