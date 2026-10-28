@@ -11,8 +11,37 @@ services:
     image: perampriya/mongodb:1.0.0 # docker build -t perampriya/mongodb:1.0.0 
     container_name: mongodb
 
+  user:
+    build:
+      context: ./user # it moves to user directory
+    image: perampriya/user:1.0.0 # docker build -t
+    container_name: user
+
+  forntend:
+    build:
+      context: ./frontend # it moves to frontend directory
+    image: perampriya/frontend:1.0.0 # docker build -t perampriya/frontend:1.0.0 
+    container_name: frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - catalogue
+      - user
+     
+  redies:
+    image: redis:7.0
+    container_name: redis
+
+  # cart:
+  #   build:
+  #     context: ./cart # it moves to cart directory
+  #   image: perampriya/cart:1.0.0 # docker build -t
+  #   container_name: cart
+
 networks:
   default:
     driver: bridge
     name: roboshop
     external: false # if true, you need to create network manually.
+
+  
