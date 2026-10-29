@@ -45,6 +45,13 @@ services:
     depends_on:
     - redis
 
+  mysql:
+    build:
+      context: ./mysql # it moves to mysql directory
+    image: perampriya/mysql:1.0.0 # docker build -t perampriya/mysql:1.0.0 
+    container_name: mysql
+    
+
 networks:
   default:
     driver: bridge
