@@ -36,11 +36,13 @@ services:
     image: redis:7.0
     container_name: redis
 
-  # cart:
-  #   build:
-  #     context: ./cart # it moves to cart directory
-  #   image: perampriya/cart:1.0.0 # docker build -t
-  #   container_name: cart
+  cart:
+    build:
+      context: ./cart # it moves to cart directory
+    image: perampriya/cart:1.0.0 # docker build -t
+    container_name: cart
+    depends_on:
+    - redis
 
 networks:
   default:
