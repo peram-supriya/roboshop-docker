@@ -32,7 +32,7 @@ services:
     - catalogue
     - user
     - cart
-    - shipping
+    #- shipping
      
   redis:
     image: redis:7.0
