@@ -53,6 +53,7 @@ services:
     container_name: shipping
     depends_on:
     - mysql
+    
   rabbitmq:
     image: rabbitmq:3
     environment:
