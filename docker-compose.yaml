@@ -30,7 +30,7 @@ services:
     - catalogue
     - user
      
-  redies:
+  redis:
     image: redis:7.0
     container_name: redis
 
