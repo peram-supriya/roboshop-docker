@@ -21,7 +21,7 @@ services:
     depends_on:
     - redis
 
-  forntend:
+  frontend:
     build:
       context: ./frontend # it moves to frontend directory
     image: perampriya/frontend:1.0.0 # docker build -t perampriya/frontend:1.0.0 
