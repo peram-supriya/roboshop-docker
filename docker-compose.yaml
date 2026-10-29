@@ -46,14 +46,14 @@ services:
     depends_on:
     - redis
 
-  shipping:
-    build:
-      context: ./shipping # it moves to shipping directory
-    image: perampriya/shipping:1.0.0 # docker build -t perampriya/shipping:1.0.0 
-    container_name: shipping
-    depends_on:
-    - mysql
-    
+  # shipping:
+  #   build:
+  #     context: ./shipping # it moves to shipping directory
+  #   image: perampriya/shipping:1.0.0 # docker build -t perampriya/shipping:1.0.0 
+  #   container_name: shipping
+  #   depends_on:
+  #   - mysql
+
   rabbitmq:
     image: rabbitmq:3
     environment:
