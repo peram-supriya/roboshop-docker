@@ -16,6 +16,8 @@ services:
       context: ./user # it moves to user directory
     image: perampriya/user:1.0.0 # docker build -t
     container_name: user
+    depends_on:
+    - redis
 
   forntend:
     build:
