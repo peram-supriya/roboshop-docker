@@ -32,6 +32,7 @@ services:
     - catalogue
     - user
     - cart
+    - shipping
      
   redis:
     image: redis:7.0
@@ -44,6 +45,14 @@ services:
     container_name: cart
     depends_on:
     - redis
+
+  shipping:
+    build:
+      context: ./shipping # it moves to shipping directory
+    image: perampriya/shipping:1.0.0 # docker build -t perampriya/shipping:1.0.0 
+    container_name: shipping
+    depends_on:
+    - mysql
 
   mysql:
     build:
